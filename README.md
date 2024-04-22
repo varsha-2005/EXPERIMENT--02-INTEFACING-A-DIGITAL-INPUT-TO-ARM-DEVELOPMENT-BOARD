@@ -51,7 +51,7 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
-
+```
 developed by:VARSHA G
 register number: 212222230166
 
@@ -86,7 +86,7 @@ int main(void)
   }
 
 }
-
+```
 ## Output  :
 
  ![WhatsApp Image 2024-04-01 at 11 08 05 AM](https://github.com/VelasiriSreeja/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/118344328/66c750b7-5a08-469e-9844-33ce80c885c4)
