@@ -1,4 +1,4 @@
-# EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD
+# EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD
 ## Aim: To Interface a Digital Input  (userpush button  ) to ARM   development board and write a  program to obtain  the data and flash the led  
 ## Components required: STM32 CUBE IDE, ARM IOT development board,  STM programmer tool.
 ## Theory 
@@ -51,49 +51,69 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
-```
-developed by:VARSHA G
-register number: 212222230166
+### DEVELOPED BY: VARSHA.G
+### REGISTER NO: 212222230166
 
+```python
 #include "main.h"
-#include "stdbool.h"
-bool PUSHBUTTON;
+#include"stdbool.h"
+bool pushbutton;
+
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+
+
 int main(void)
 {
-    HAL_Init();
-
-    SystemClock_Config();
-
-    MX_GPIO_Init();
-    while (1)
-  {
-    	  PUSHBUTTON=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13);
-	  	 	 if(PUSHBUTTON==0)
-	  	 	 {
-	  	 		 HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
-	  	 		 HAL_Delay(2000);
-	  	 		 HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
-	  	 		 HAL_Delay(2000);
-	  	 	 }
-	  	 	 else
-	  	 	 {
-	  	 		 HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
-	  	 		 HAL_Delay(2000);
-	  	 	 }
-   
-  }
-
-}
-```
-## Output  :
-
- ![WhatsApp Image 2024-04-01 at 11 08 05 AM](https://github.com/VelasiriSreeja/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/118344328/66c750b7-5a08-469e-9844-33ce80c885c4)
+  
+			HAL_Init();
 
  
- ![WhatsApp Image 2024-04-01 at 11 08 05 AM (1)](https://github.com/VelasiriSreeja/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/118344328/f1f0cc96-759c-49a9-aeb5-417a9b5a8f35)
+  SystemClock_Config();
+
+ 
+  MX_GPIO_Init();
+ 
+  while (1)
+  {
+   
+pushbutton=HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13);
+if(pushbutton==0)
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+	HAL_Delay(2000);
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+	HAL_Delay(2000);
+}
+else
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+	HAL_Delay(2000);
+
+}
+   
+  }
+  
+}
+```
+
+
+
+## Output  :
+
+### LED_OFF
+
+![PMC_2 1](https://github.com/gummadileepkumar/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/118707761/c4569141-edce-45fc-804d-ac72bfbdd5d9)
+
+
+### LED ON
+ 
+ 
+ 
+![image](https://github.com/22003264/EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD/assets/119389139/2019d982-8388-4ccb-9370-93ce465c9a45)
+
 
  
 ## Result :
-Interfacing a digital Input (Pushbutton ) with ARM microcontroller based IOT development is executed and the results are verified.
+Interfacing a digital Input (Pushbutton ) with ARM microcontroller based IOT development is executed and the results are verified.
